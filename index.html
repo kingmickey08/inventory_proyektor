@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head> <!-- bagian kepala website yang terdiri dari: judul web, dan berbagai tema yang akan di gunakan oleh website -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pertanyaan Acak</title> <!-- ini bagian judul halaman web -->
+    <style> <!-- ini bagian pengaturan tema -->
+        body {
+            font-family: Arial, sans-serif; <!-- untuk mengganti font huruf -->
+            display: flex; <!-- untuk mengatur tampilan agar menyesuaikan ukuran layar -->
+            justify-content: center; <!-- untuk mengatur posisi conten web agar berada di tengah -->
+            align-items: center; <!-- untuk mengatur posisi item dalam conten agar berada di tengah -->
+            height: 100vh; <!-- untuk mengatur ketinggian halaman web -->
+            background-color: #f0f0f0; <!-- untuk mengatur warna backround web -->
+            margin: 0; <!-- mengatur batasan tepi halaman web -->
+        }
+        .container {
+            text-align: center; <!-- mengatur perataan teks menjadi rata tengah -->
+            padding: 20px; <!-- batasan tepi dari bagian container -->
+            background: white; <!-- untuk mengatur warna backround web -->
+            border-radius: 10px; <!-- untuk mengatur lengkung di pojokan bagian container -->
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); <!-- mengatur tampilan bayangan di belakang bagian kontainer -->
+        }
+    </style> 
+</head> 
+<body> <!-- berisi bagian utama dari sebuah website -->
+    <div class="container"> <!-- untuk mengelompokan elemen atau bermacam-macam tag agar menjadi suatu grup -->
+        <h1>Pertanyaan Acak</h1> <!-- header tingkat 1 akan menebalkan huruf dan membesarkan ukuran font -->
+        <p id="question">Loading question...</p> <!-- paragraf -->
+    </div>
+    <script> <!-- memasukan java script ke script html -->
+        const questions = [ <!-- untuk menyimpan data atau nilai yang sudah pasti dan tidak berubah -->
+            "Apa warna langit pada hari cerah?",
+            "Berapa banyak jari di tangan manusia?",
+            "Apa nama ibu kota negara Indonesia?",
+            "Sebutkan satu hewan yang bisa terbang.",
+            "Apa yang biasanya kita makan untuk sarapan?"
+        ];
+
+        function showRandomQuestion() { <!-- fungsi yang digunakan untuk memanggil pertanyaan secara acak -->
+            const randomIndex = Math.floor(Math.random() * questions.length); <!-- untuk memilih sebuah pertnyaan secara acak dari conts question -->
+            const questionElement = document.getElementById('question'); <!-- untuk mengambil pertanyaan yang sudah diacak oleh const randomIndex -->
+            questionElement.textContent = questions[randomIndex]; <!-- untuk memanggil pertanyaan yang sudah diacak -->
+        }
+
+        // Panggil fungsi ini saat halaman dimuat
+        window.onload = showRandomQuestion; <!-- untuk memanggil function showRandomQuestion pada saat website dibuka -->
+    </script>
+</body>
+</html>
