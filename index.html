@@ -3,7 +3,7 @@
 <head> <!-- bagian kepala website yang terdiri dari: judul web, dan berbagai tema yang akan di gunakan oleh website -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pertanyaan Acak</title> <!-- ini bagian judul halaman web -->
+	<title>MONEVINBAR</title> <!-- ini bagian judul halaman web -->
     <style> <!-- ini bagian pengaturan tema -->
         body {
             font-family: Arial, sans-serif; <!-- untuk mengganti font huruf -->
@@ -25,26 +25,15 @@
 </head> 
 <body> <!-- berisi bagian utama dari sebuah website -->
     <div class="container"> <!-- untuk mengelompokan elemen atau bermacam-macam tag agar menjadi suatu grup -->
-        <h1>Pertanyaan Acak</h1> <!-- header tingkat 1 akan menebalkan huruf dan membesarkan ukuran font -->
-        <p id="question">Loading question...</p> <!-- paragraf -->
+        <h1>MONEVINBAR</h1> <!-- header tingkat 1 akan menebalkan huruf dan membesarkan ukuran font -->
+        <p id="question">Loading...</p> <!-- paragraf -->
     </div>
-    <script> <!-- memasukan java script ke script html -->
-        const questions = [ <!-- untuk menyimpan data atau nilai yang sudah pasti dan tidak berubah -->
-            "Apa warna langit pada hari cerah?",
-            "Berapa banyak jari di tangan manusia?",
-            "Apa nama ibu kota negara Indonesia?",
-            "Sebutkan satu hewan yang bisa terbang.",
-            "Apa yang biasanya kita makan untuk sarapan?"
-        ];
-
-        function showRandomQuestion() { <!-- fungsi yang digunakan untuk memanggil pertanyaan secara acak -->
-            const randomIndex = Math.floor(Math.random() * questions.length); <!-- untuk memilih sebuah pertnyaan secara acak dari conts question -->
-            const questionElement = document.getElementById('question'); <!-- untuk mengambil pertanyaan yang sudah diacak oleh const randomIndex -->
-            questionElement.textContent = questions[randomIndex]; <!-- untuk memanggil pertanyaan yang sudah diacak -->
-        }
-
-        // Panggil fungsi ini saat halaman dimuat
-        window.onload = showRandomQuestion; <!-- untuk memanggil function showRandomQuestion pada saat website dibuka -->
-    </script>
+	<pre>
+		Nama Barang: Proyektor
+		Merk/Tipe Barang: ViewSonic
+		Lokasi Barang: Ruang 235
+		Tanggal Pembelian: 15 Maret 2024
+	</pre>
+   
 </body>
 </html>
